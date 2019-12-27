@@ -1,0 +1,59 @@
+es:
+  hosts: 'search-gvr-datahub-es-dev-ip56g4qkhk7bfvx2lc3dfnosre.cn-northwest-1.es.amazonaws.com.cn:443'
+  awsHost: 'search-gvr-datahub-es-dev-ip56g4qkhk7bfvx2lc3dfnosre.cn-northwest-1.es.amazonaws.com.cn'
+  awsHostSql: 'http://search-gvr-datahub-es-dev-ip56g4qkhk7bfvx2lc3dfnosre.cn-northwest-1.es.amazonaws.com.cn/_opendistro/_sql'
+  bulk: false
+  useSSL: true
+  user: gvr_data_hub_dev
+  password: gvr_data_hub_password
+  trustSelfSigned: true
+  hostnameVerification: false
+  jdbc_url: 'jdbc:elasticsearch://https://search-gvr-datahub-es-dev-ip56g4qkhk7bfvx2lc3dfnosre.cn-northwest-1.es.amazonaws.com.cn'
+  gvr:
+    gvr_middle_end_metric_v1:
+      index: 'gvr_middle_end_metric_v1'
+      url: 'http://locahost:9200/gvr_middle_end_metric_v1/_search'
+    gvr_gas_sale_record:
+      index: 'gvr_gas_sale_records_v1'
+      url: 'http://locahost:9200/gvr_gas_sale_records_v1/_search'
+    gvr_gas_buy_record:
+      index: 'gvr_gas_buy_records_v1'
+      url: 'http://locahost:9200/gvr_gas_buy_records_v1/_search'
+    gvr_gas_tank_status:
+      index: 'gvr_gas_tank_status_v1'
+      url: 'http://locahost:9200/gvr_gas_tank_status_v1/_search'
+    gvr_sku_order:
+      index: 'gvr_sku_order_v1'
+      url: 'http://locahost:9200/gvr_sku_order_v1/_search'
+    gvr_sku_order_detail:
+      index: 'gvr_sku_order_detail_v1'
+      url: 'http://locahost:9200/gvr_sku_order_detail_v1/_search'
+    gvr_gas_station:
+      index: 'gvr_gas_station_v1'
+      url: 'http://locahost:9200/gvr_gas_station_v1/_search'
+    gvr_vis_auth:
+      index: 'gvr_vis_auth_v1'
+      url: 'http://locahost:9200/gvr_vis_auth_v1/_search'
+    gvr_vis_trans:
+      index: 'gvr_vis_trans_v1'
+      url: 'http://locahost:9200/gvr_vis_trans_v1/_search'
+    gvr_vis_station:
+      index: 'gvr_vis_station_v1'
+      url: 'http://locahost:9200/gvr_vis_station_v1/_search'
+  vis:
+    service:
+      sinoiv:
+        url: "http://sinoiv.jd.com"
+      gvr:
+        url: "http://sinoiv.jd.com"
+  grpc:
+    server:
+      port: 9090
+      address: 0.0.0.0
+    client:
+      GLOBAL:
+        negotiationType: plaintext
+      local-grpc-server:
+        address: 'static://127.0.0.1:9090'
+  wgtRrpc:
+    wgtId: "1"
