@@ -27,7 +27,7 @@ dependency增加如下内容：
 
 ## SDK 暂时提供两个接口:
  1.addVisListener(Consumer\<NozzState\> visProcessor), 监听车环的识别变化</br>
- 2.NozzState getNozzState(String nozNr)，读取加油枪读头识别的车环</br>
+ 2.NozzState getNozzState(String nozNr)，读取加油枪读头识别的车环，如果读不到，字段会为空</br>
 
 NozzState 字段描述如下：</br>
 
