@@ -25,6 +25,6 @@ dependency增加如下内容：
 
 使用SDK，需要配套安装部署wgt的虚拟组件，可单独联系jian.hong@veeder.com申请此组件安装部署。
 
-SDK 暂时提供两个接口:
- 1.addVisListener(Consumer<NozzState> visProcessor), 监听车环的识别变化
- 2.NozzState getNozzState(String nozNr)，读取加油枪读头识别的车环
+## SDK 暂时提供两个接口:
+ 1.addVisListener(Consumer<NozzState> visProcessor), 监听车环的识别变化</br>
+ 2.NozzState getNozzState(String nozNr)，读取加油枪读头识别的车环</br>
