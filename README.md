@@ -23,7 +23,9 @@ dependency增加如下内容：
         </dependency>
 ```
 
-使用SDK，需要配套安装部署wgt的虚拟组件，可单独联系jian.hong@veeder.com申请此组件安装部署。
+使用此SDK，需要配套安装部署wgt的虚拟组件，可单独联系jian.hong@veeder.com申请此组件安装部署。</br>
+
+基于此SDK,应用可以监听车环状态，或者主动读取车环信息，进行其他逻辑的开发。
 
 ## SDK 暂时提供两个接口:
  1.addVisListener(Consumer\<NozzState\> visProcessor), 监听车环的识别变化</br>
