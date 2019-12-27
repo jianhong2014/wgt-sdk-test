@@ -1,5 +1,5 @@
 # wgt-sdk-test
-wgt的java sdk 测试
+wgt的java sdk ，java版本1.8+测试
 sdk放在github 上的maven个人仓库上，应用的POM 里面增加仓库地址：
 ```xml
     <repositories>
