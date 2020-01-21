@@ -36,11 +36,14 @@ dependency增加如下内容：
     private WgtDeviceBuilder wgtDeviceBuilder; 
 ```
 </br>
-2. 创建wgtDevice:</br>
-```java
-  WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("localhost")
-```
+2. 创建wgtDevice:
 </br>
+```java
+    @Autowired
+    private WgtDeviceBuilder wgtDeviceBuilder; 
+   
+   WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("localhost")
+```
 ## SDK 接口如下:
  1.addVisListener(Consumer\<NozzState\> visProcessor), 监听车环的识别变化</br>
  NozzState 字段描述如下：</br>
