@@ -28,7 +28,7 @@ dependency增加如下内容：
 基于此SDK,应用可以监听车环状态，或者主动读取车环信息，进行其他逻辑的开发。
 
 ### 使用SDK的步骤
-1.springboot 注入 WgtDeviceBuilder，并在启动类里面添加componentScan注、比如</br>
+1. springboot 注入 WgtDeviceBuilder，并在启动类里面添加componentScan注、比如</br>
 ```java
     @ComponentScan({"com.gvr.datahub.sdk.wgt"}</br>
     public class TestWgtSdkApplication
@@ -37,8 +37,7 @@ dependency增加如下内容：
 ```
 2. 创建wgtDevice:</br>
    WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("localhost")  
-   </br>
-3.使用wgtDevice的接口监听或者读取数据
+3. 使用wgtDevice的接口监听或者读取数据
    
 ### SDK 接口如下:
  1.addVisListener(Consumer\<NozzState\> visProcessor), 监听车环的识别变化</br>
