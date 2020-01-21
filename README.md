@@ -29,14 +29,18 @@ dependency增加如下内容：
 
 ### 使用SDK的步骤
 1.springboot 注入 WgtDeviceBuilder，并在启动类里面添加componentScan注、比如</br>
+```java
     @ComponentScan({"com.gvr.datahub.sdk.wgt"}</br>
     public class TestWgtSdkApplication
-    
     @Autowired
-    private WgtDeviceBuilder wgtDeviceBuilder;</br>
+    private WgtDeviceBuilder wgtDeviceBuilder; 
+```
+</br>
 2. 创建wgtDevice:</br>
+```java
 WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("localhost")
-
+```
+</br>
 ## SDK 接口如下:
  1.addVisListener(Consumer\<NozzState\> visProcessor), 监听车环的识别变化</br>
  NozzState 字段描述如下：</br>
