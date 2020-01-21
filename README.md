@@ -29,7 +29,7 @@ dependency增加如下内容：
 
 ### 使用SDK的步骤
 1.springboot 注入 WgtDeviceBuilder，并在启动类里面添加componentScan注、比如</br>
-    @ComponentScan({"com.gvr.datahub.sdk.wgt"}
+    @ComponentScan({"com.gvr.datahub.sdk.wgt"}</br>
     public class TestWgtSdkApplication
     
     @Autowired
