@@ -34,6 +34,9 @@ dependency增加如下内容：
     
     @Autowired
     private WgtDeviceBuilder wgtDeviceBuilder;
+    </br>
+2. 创建wgtDevice:</br>
+WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("localhost")
 
 ## SDK 接口如下:
  1.addVisListener(Consumer\<NozzState\> visProcessor), 监听车环的识别变化</br>
