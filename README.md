@@ -62,7 +62,7 @@ track1| String | 是,车环离开时，此字段为空 |车环号
 wgtId | String | 是 |wgt的标识
 wgtIp | String | 是 |wgt的ip地址
 timeout | int | 是 |超时时间
-wgtAddr| String | wgt串口地址
+wgtAddr| String |否| wgt串口地址
 
 返回的状态码如下：</br>
 状态码 | 描述 
@@ -74,8 +74,8 @@ wgtAddr| String | wgt串口地址
 004 | 错误消息格式
 005 | 缺少参数
 006 | 油枪离线
-007 |错误枪号 
-008 |错误wgtId 
+007 | 错误枪号 
+008 | 错误wgtId 
 009 | 认证失败
 010 | 端口错误
 999 | 超时无响应
