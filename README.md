@@ -38,7 +38,7 @@ dependency增加如下内容：
 </br>
 2. 创建wgtDevice:</br>
 ```java
-WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("localhost")
+  WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("localhost")
 ```
 </br>
 ## SDK 接口如下:
