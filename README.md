@@ -33,8 +33,7 @@ dependency增加如下内容：
     public class TestWgtSdkApplication
     
     @Autowired
-    private WgtDeviceBuilder wgtDeviceBuilder;
-    </br>
+    private WgtDeviceBuilder wgtDeviceBuilder;</br>
 2. 创建wgtDevice:</br>
 WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("localhost")
 
