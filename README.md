@@ -57,6 +57,7 @@ nozNr | String | 是 |读头的唯一号
 track1| String | 是,车环离开时，此字段为空 |车环号
 
 3.String setupWgt(WgtSetupRequest info)，设置wgt的信息</br>
+
 名称 | 类型 |是否必须 |描述 
 ----|----|----|---
 wgtId | String | 是 |wgt的标识
@@ -65,6 +66,7 @@ timeout | int | 是 |超时时间
 wgtAddr| String |否| wgt串口地址
 
 返回的状态码如下：</br>
+
 状态码 | 描述 
 ----|----
 000 | 成功 
