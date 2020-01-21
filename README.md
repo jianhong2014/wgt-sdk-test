@@ -81,3 +81,11 @@ wgtAddr| String |否| wgt串口地址
 009 | 认证失败
 010 | 端口错误
 999 | 超时无响应
+</br>
+4.addWgtHbConsumer(Consumer<WgtKeepLive> wgtDataProcessor),wgt bridge的心跳回调处理:</br>
+WgtKeepLive 字段如下：</br>
+
+名称 | 类型 |是否必须 |描述 
+----|----|----|---
+mid | String | 是 |消息的唯一标识，wgt产生
+rc | String | 是 |状态码，定义如上
