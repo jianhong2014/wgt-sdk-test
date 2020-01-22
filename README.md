@@ -50,7 +50,7 @@ wgtId | String | 是 |wgt的唯一标识
 nozNr | String | 是 |读头的唯一号
 track1| String | 是,车环离开时，此字段为空 |车环号
 
- 2.NozzState getNozzState(String nozNr)，读取加油枪读头识别的车环，如果读不到，字段会为空</br>
+ 2.NozzState getNozzState(String wgtId,String nozNr)，读取加油枪读头识别的车环，如果读不到，字段会为空</br>
  
  
 名称 | 类型 |是否必须 |描述 
