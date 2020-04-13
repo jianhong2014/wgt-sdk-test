@@ -101,7 +101,7 @@
         <dependency>
             <groupId>com.gvr.datahub</groupId>
             <artifactId>wgt-dev-sdk</artifactId>
-            <version>1.3-RELEASE</version>
+            <version>1.4-RELEASE</version>
         </dependency>
     </dependencies>
 

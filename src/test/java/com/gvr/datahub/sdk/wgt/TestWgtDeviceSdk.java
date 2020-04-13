@@ -113,4 +113,30 @@ public class TestWgtDeviceSdk {
             e.printStackTrace();
         }
     }
+
+    /**
+     * 读取枪号绑定的VIS读头号
+     */
+    @Test
+    public void testGunNrRead(){
+        try(WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("161.189.102.2")){
+            int nr = wgt.getNozNr(15);
+            logger.info("15号枪的读头号{}",nr);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 通过枪号读取枪绑定的读头识别状态
+     */
+    @Test
+    public void testGunVisStatByGunId(){
+        try(WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("161.189.102.2")){
+            NozzState nrStateByGun = wgt.getNrStateByGun(wgtId,15);
+            logger.info("15号枪的读头识别状态{}",nrStateByGun);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
