@@ -6,7 +6,7 @@
 
     <groupId>com.gvr.datahub</groupId>
     <artifactId>WgtSdkTest</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1-release</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -14,6 +14,12 @@
         <version>2.1.1.RELEASE</version>
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
+
+    <properties>
+        <github.global.server>github</github.global.server>
+        <useUniqueVersions>false</useUniqueVersions>
+    </properties>
+
     <profiles>
         <profile>
             <id>dev</id>
@@ -68,7 +74,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>3.2.4.RELEASE  </version>
+            <version>3.2.4.RELEASE</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -95,7 +101,7 @@
         <dependency>
             <groupId>com.gvr.datahub</groupId>
             <artifactId>wgt-dev-sdk</artifactId>
-            <version>1.0-RELEASE</version>
+            <version>1.3-RELEASE</version>
         </dependency>
     </dependencies>
 
