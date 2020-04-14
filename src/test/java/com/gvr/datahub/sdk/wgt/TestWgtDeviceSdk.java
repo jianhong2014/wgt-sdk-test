@@ -40,6 +40,9 @@ public class TestWgtDeviceSdk {
     private final String dc = "ec2-52-82-4-65.cn-northwest-1.compute.amazonaws.com.cn";
 
 
+    /***
+     * 测试主动读头状态查询
+     */
     @Test
     public void testGetNozzleStat1()  {
         logger.info("test testGetNozzleStat");
@@ -92,6 +95,9 @@ public class TestWgtDeviceSdk {
     }
 
 
+    /***
+     * 测试监听读头状态变化
+     */
     @Test
     public void testDataListener(){
         logger.info("test wdg device listener");
