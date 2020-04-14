@@ -1,5 +1,10 @@
-dc:
-  host: 10.28.192.60
+vis:
+  appId: "wgtSdkTest"
+  service:
+    sinoiv:
+      url: "http://sinoiv.jd.com"
+    gvr:
+      url: "http://sinoiv.jd.com"
 grpc:
   server:
     port: 9090
@@ -9,5 +14,8 @@ grpc:
       negotiationType: plaintext
     local-grpc-server:
       address: 'static://127.0.0.1:9090'
-wgtRrpc:
-  wgtId: "1"
+dc:
+  host: 52.82.4.65
+wgtGrpc:
+  wgtId: "110"
+
