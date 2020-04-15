@@ -93,3 +93,9 @@ WgtKeepLive 字段如下：</br>
 ----|----|----|---
 mid | String | 是 |消息的唯一标识，wgt产生
 rc | String | 是 |状态码，定义如上
+</br>
+5.int getNozNr(int gunId),读取油枪所对应的读头号，方法返回参数为读头号:</br>
+6.NozzState getNrStateByGun(wgtId,gunId)，读取油枪识别的车环的车环状态</br>
+因为油枪和读头是绑定的，但是油枪和读头号并不是唯一绑定的，所以需要配置映射关系。wgtadaptor组件可以配置二者映射关系，此接口可以读取油枪上油枪识别到的车环状态。
+
+ 
