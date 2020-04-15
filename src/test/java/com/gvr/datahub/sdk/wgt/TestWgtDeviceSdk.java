@@ -108,7 +108,7 @@ public class TestWgtDeviceSdk {
             logger.info("visListener 识别到车环 {}",stat);
         };
         try(WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("161.189.102.2")){
-            wgt.addWgtHbConsumer(nozzStateProcessor);
+            //wgt.addWgtHbConsumer(nozzStateProcessor);
             wgt.addVisListener(visListener);
             boolean test = true;
             while(test){

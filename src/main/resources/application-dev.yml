@@ -1,21 +1,7 @@
 vis:
-  appId: "wgtSdkTest"
-  service:
-    sinoiv:
-      url: "http://sinoiv.jd.com"
-    gvr:
-      url: "http://sinoiv.jd.com"
-grpc:
-  server:
-      port: 9090
-      address: 0.0.0.0
-  client:
-      GLOBAL:
-         negotiationType: plaintext
-      local-grpc-server:
-         address: 'static://127.0.0.1:9090'
+  appId: "wgtSdkTest2"
 dc:
-    host: 52.82.4.65
+    host: 10.28.188.87
 wgtGrpc:
-      wgtId: "110"
+      wgtId: "001"
 
