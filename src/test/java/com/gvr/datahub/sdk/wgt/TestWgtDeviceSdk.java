@@ -29,7 +29,7 @@ public class TestWgtDeviceSdk {
     @Autowired
     private WgtDeviceBuilder wgtDeviceBuilder;
 
-    private final String wgtId = "110";
+    private final String wgtId = "002";
 
     private final String wgtIp = "10.28.188.31";
 
@@ -46,8 +46,8 @@ public class TestWgtDeviceSdk {
     @Test
     public void testGetNozzleStat1()  {
         logger.info("test testGetNozzleStat");
-        try(WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("localhost")){
-            NozzState nozzState = wgt.getNozzState(wgtId,1);
+        try(WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("10.28.188.87")){
+            NozzState nozzState = wgt.getNrStateByGun(wgtId,1);
             logger.info("get nozzstate {}", JSON.toJSON(nozzState));
         } catch (Exception e) {
             e.printStackTrace();
@@ -57,7 +57,7 @@ public class TestWgtDeviceSdk {
     @Test
     public void testGetNozzleStat2()  {
         logger.info("test testGetNozzleStat");
-        try(WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("localhost")){
+        try(WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("120.25.68.206")){
             NozzState nozzState = wgt.getNozzState(wgtId,1);
             logger.info("get nozzstate {}", JSON.toJSON(nozzState));
         } catch (Exception e) {
@@ -79,7 +79,7 @@ public class TestWgtDeviceSdk {
     @Test
     public void setupWgt(){
         logger.info("test setup wgt");
-        try(WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("localhost")){
+        try(WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("120.25.68.206")){
             WgtSetupRequest request = new WgtSetupRequest();
             request.setTimeout(2000);
             request.setWgtId(wgtId);
@@ -102,13 +102,13 @@ public class TestWgtDeviceSdk {
     public void testDataListener(){
         logger.info("test wdg device listener");
         Consumer<WgtKeepLive> nozzStateProcessor = (stat) -> {
-           logger.info("heartbeat监听到wgt 心跳数据 {}",stat);
+           //logger.info("heartbeat监听到wgt 心跳数据 {}",stat);
         };
         Consumer<NozzState> visListener = (stat) -> {
             logger.info("visListener 识别到车环 {}",stat);
         };
-        try(WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("161.189.102.2")){
-            //wgt.addWgtHbConsumer(nozzStateProcessor);
+        try(WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("120.25.68.206")){
+            wgt.addWgtHbConsumer(nozzStateProcessor);
             wgt.addVisListener(visListener);
             boolean test = true;
             while(test){

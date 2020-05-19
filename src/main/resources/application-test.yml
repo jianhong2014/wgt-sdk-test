@@ -1,7 +1,7 @@
 vis:
-  appId: "wgtSdkTest2"
+  appId: "wgtSdkTest5"
 dc:
   host: 52.82.4.65
 wgtGrpc:
-  wgtId: "001"
+  wgtId: "002"
 
