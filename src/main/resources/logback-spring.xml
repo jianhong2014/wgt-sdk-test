@@ -11,7 +11,7 @@
     </springProfile>
     <springProfile name="test,production">
         <logger name="com.gvr.datahub.adaptor.wgt" level="WARN" additivity="false">
-            <appender-ref ref="FILE"/>
+            <appender-ref ref="CONSOLE"/>
         </logger>
     </springProfile>
 </configuration>

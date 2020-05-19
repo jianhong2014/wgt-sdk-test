@@ -14,6 +14,7 @@ import org.junit.runners.MethodSorters;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -37,7 +38,8 @@ public class TestWgtDeviceSdk {
 
     private final String wgtAddr = "32";
 
-    private final String dc = "ec2-52-82-4-65.cn-northwest-1.compute.amazonaws.com.cn";
+    @Value("${wgtAdaptor.host}")
+    private  String wgtAdaptorHost;
 
 
     /***
@@ -57,7 +59,7 @@ public class TestWgtDeviceSdk {
     @Test
     public void testGetNozzleStat2()  {
         logger.info("test testGetNozzleStat");
-        try(WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("120.25.68.206")){
+        try(WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice(wgtAdaptorHost)){
             NozzState nozzState = wgt.getNozzState(wgtId,1);
             logger.info("get nozzstate {}", JSON.toJSON(nozzState));
         } catch (Exception e) {
@@ -107,7 +109,7 @@ public class TestWgtDeviceSdk {
         Consumer<NozzState> visListener = (stat) -> {
             logger.info("visListener 识别到车环 {}",stat);
         };
-        try(WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("120.25.68.206")){
+        try(WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice(wgtAdaptorHost)){
             wgt.addWgtHbConsumer(nozzStateProcessor);
             wgt.addVisListener(visListener);
             boolean test = true;

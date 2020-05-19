@@ -2,6 +2,8 @@ vis:
   appId: "wgtSdkTest3"
 dc:
     host: 10.28.188.87
+wgtAdaptor:
+    host: 10.28.188.87
 wgtGrpc:
       wgtId: "001"
 
