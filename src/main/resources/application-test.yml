@@ -3,9 +3,9 @@ vis:
 dc:
   host: 52.82.4.65
 wgtAdaptor:
-  host: 10.28.188.87
+  host: localhost
 wgtGrpc:
-  wgtId: "002"
+  wgtId: "1"
 
 
 

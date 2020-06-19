@@ -30,7 +30,7 @@ public class TestWgtDeviceSdk {
     @Autowired
     private WgtDeviceBuilder wgtDeviceBuilder;
 
-    private final String wgtId = "002";
+    private final String wgtId = "1";
 
     private final String wgtIp = "10.28.188.31";
 
@@ -48,8 +48,8 @@ public class TestWgtDeviceSdk {
     @Test
     public void testGetNozzleStat1()  {
         logger.info("test testGetNozzleStat");
-        try(WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("10.28.188.87")){
-            NozzState nozzState = wgt.getNrStateByGun(wgtId,1);
+        try(WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("localhost")){
+            NozzState nozzState = wgt.getNrStateByGun(wgtId,"2");
             logger.info("get nozzstate {}", JSON.toJSON(nozzState));
         } catch (Exception e) {
             e.printStackTrace();
@@ -60,7 +60,7 @@ public class TestWgtDeviceSdk {
     public void testGetNozzleStat2()  {
         logger.info("test testGetNozzleStat");
         try(WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice(wgtAdaptorHost)){
-            NozzState nozzState = wgt.getNozzState(wgtId,1);
+            NozzState nozzState = wgt.getNozzState(wgtId,"1");
             logger.info("get nozzstate {}", JSON.toJSON(nozzState));
         } catch (Exception e) {
             e.printStackTrace();
@@ -128,7 +128,7 @@ public class TestWgtDeviceSdk {
     @Test
     public void testGunNrRead(){
         try(WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("161.189.102.2")){
-            int nr = wgt.getNozNr(15);
+            String nr = wgt.getNozNr("15");
             logger.info("15号枪的读头号{}",nr);
         } catch (Exception e) {
             e.printStackTrace();
@@ -141,7 +141,7 @@ public class TestWgtDeviceSdk {
     @Test
     public void testGunVisStatByGunId(){
         try(WgtDevice wgt = wgtDeviceBuilder.buildWgtDevice("161.189.102.2")){
-            NozzState nrStateByGun = wgt.getNrStateByGun(wgtId,15);
+            NozzState nrStateByGun = wgt.getNrStateByGun(wgtId,"15");
             logger.info("15号枪的读头识别状态{}",nrStateByGun);
         } catch (Exception e) {
             e.printStackTrace();
