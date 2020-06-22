@@ -102,6 +102,17 @@
             <groupId>com.gvr.datahub</groupId>
             <artifactId>wgt-dev-sdk</artifactId>
             <version>1.7-RELEASE</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.gvr.datahub</groupId>
+                    <artifactId>datahub-mq-common</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.gvr.datahub</groupId>
+            <artifactId>datahub-mq-common</artifactId>
+            <version>1.99-release</version>
         </dependency>
     </dependencies>
 
